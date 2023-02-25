@@ -1,8 +1,9 @@
 import classes from "./auth.module.css";
+import { signIn } from "next-auth/react";
 
 function Authentication() {
   return (
-    <button className={classes.container}>
+    <button className={classes.container} onClick={() => signIn("google")}>
       <div className={classes.googleContainer}>
         <img
           className={classes.googleIcon}
