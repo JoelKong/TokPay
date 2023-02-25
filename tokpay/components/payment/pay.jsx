@@ -30,6 +30,7 @@ function Pay({ session }) {
       id: session.session.user.id,
       email: formFields,
     });
+    session.session.user.currentBalance = sendMoney.data.currentBalance;
     setDisabled(false);
     setMessage(sendMoney.data.message);
     setFormFields([{ email: "", amount: 0 }]);
@@ -54,6 +55,9 @@ function Pay({ session }) {
   return (
     <div className={classes.pay}>
       <h2 className={classes.header}>Payment</h2>
+      <p
+        className={classes.balance}
+      >{`Current Balance: $${session.session.user.currentBalance}`}</p>
       {message && <p className={classes.message}>{message}</p>}
       <form onSubmit={submit}>
         {formFields.map((form, index) => {

@@ -16,6 +16,12 @@
   margin-bottom: 0.5rem;
 }
 
+.balance {
+  color: white;
+  font-size: 40px;
+  margin-bottom: 1rem;
+}
+
 .layout {
   display: flex;
   flex-direction: column;
