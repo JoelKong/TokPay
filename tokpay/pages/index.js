@@ -1,4 +1,3 @@
-import { Fragment } from "react";
 import dynamic from "next/dynamic";
 import { samplePieData } from "../utils/charts/samplechart";
 const DynamicDescription = dynamic(
@@ -11,10 +10,10 @@ import Introduction from "../components/introduction/intro";
 
 function Landing() {
   return (
-    <Fragment>
+    <main className="main">
       <Introduction />
       <DynamicDescription samplePieData={samplePieData} />
-    </Fragment>
+    </main>
   );
 }
 
