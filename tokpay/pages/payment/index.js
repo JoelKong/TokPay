@@ -1,8 +1,8 @@
 import PaymentLayout from "../../components/paymentLayout/paymentLayout";
 import { getSession } from "next-auth/react";
 
-function Payment() {
-  return <PaymentLayout />;
+function Payment({ session }) {
+  return <PaymentLayout session={session} />;
 }
 
 export async function getServerSideProps(context) {
