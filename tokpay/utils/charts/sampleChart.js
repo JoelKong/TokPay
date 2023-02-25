@@ -8,3 +8,13 @@ export const samplePieData = {
     },
   ],
 };
+
+export const options = {
+  plugins: {
+    legend: {
+      labels: {
+        color: "#fff",
+      },
+    },
+  },
+};

@@ -1,7 +1,57 @@
-.layout{
-    display:flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    color: white;
+.layout {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  width: 85vw;
+  font-size: 40px;
+}
+
+.value {
+  margin-top: 1rem;
+}
+
+.input {
+  width: 20%;
+  height: 2rem;
+  padding-left: 0.3rem;
+  border-radius: 0.3rem;
+  margin-top: 1rem;
+}
+
+.button {
+  margin-top: 1rem;
+  width: 10%;
+  height: 2rem;
+  border-radius: 0.3rem;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: rgb(224, 214, 214);
+}
+
+.message {
+  margin-top: 1rem;
+  color: green;
+}
+
+.loader {
+  margin: 0 auto;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }

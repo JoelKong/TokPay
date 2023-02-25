@@ -3,6 +3,7 @@ import { Pie } from "react-chartjs-2";
 import { useEffect, useState } from "react";
 import classes from "./description.module.css";
 import Authentication from "../auth/auth";
+import { options } from "../../utils/charts/samplechart";
 
 function Description({ samplePieData }) {
   const [isComponentMounted, setIsComponentMounted] = useState(false);
@@ -19,7 +20,12 @@ function Description({ samplePieData }) {
     return (
       <section className={classes.section}>
         <div className={classes.chart}>
-          <Pie data={samplePieData} width={100} height={100} />
+          <Pie
+            data={samplePieData}
+            options={options}
+            width={100}
+            height={100}
+          />
         </div>
         <article className={classes.article}>
           <div>

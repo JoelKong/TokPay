@@ -1,3 +1,21 @@
+.pay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 85vw;
+}
+
+.input {
+  border-radius: 0.3rem;
+}
+
+.header {
+  color: white;
+  font-size: 50px;
+  margin-bottom: 0.5rem;
+}
+
 .layout {
   display: flex;
   flex-direction: column;
@@ -5,7 +23,64 @@
 }
 
 .message {
-  margin-top: 2rem;
   color: green;
   font-size: 30px;
+  margin-bottom: 1rem;
+}
+
+.email {
+  height: 2rem;
+  padding-left: 0.2rem;
+}
+
+.amount {
+  height: 2rem;
+  padding-left: 0.2rem;
+}
+
+.button {
+  height: 2rem;
+  cursor: pointer;
+}
+
+.add {
+  width: 10%;
+  height: 2rem;
+  border-radius: 0.3rem;
+}
+
+.submit {
+  margin-top: 0.5rem;
+  width: 10%;
+  height: 2rem;
+  border-radius: 0.3rem;
+}
+
+.add:hover {
+  cursor: pointer;
+  background-color: rgb(224, 214, 214);
+}
+
+.submit:hover {
+  cursor: pointer;
+  background-color: rgb(224, 214, 214);
+}
+
+.loader {
+  margin: 0 auto;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  width: 25px;
+  height: 25px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
