@@ -18,4 +18,6 @@ function Landing() {
   );
 }
 
+export async function getServerSideProps(context) {}
+
 export default Landing;
