@@ -1,13 +1,12 @@
 import classes from "./auth.module.css";
-import { signIn, useSession } from "next-auth/react";
-import { useRouter } from "next/router";
+import { signIn } from "next-auth/react";
 
 function Authentication() {
-  const router = useRouter();
-  const { data: session, status } = useSession();
-
   return (
-    <button className={classes.container} onClick={() => signIn("google")}>
+    <button
+      className={classes.container}
+      onClick={() => signIn("google", { callbackUrl: "/dashboard" })}
+    >
       <div className={classes.googleContainer}>
         <img
           className={classes.googleIcon}
