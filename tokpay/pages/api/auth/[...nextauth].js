@@ -18,7 +18,9 @@ export const authOptions = {
       const userData = await collection.findOne({ id: session.token.sub });
       if (userData) {
         session.session.user.currentBalance = userData.currentBalance;
+        session.session.user.id = userData.id;
       }
+      client.close();
       return session;
     },
     async signIn(user, account, profile) {
@@ -26,6 +28,7 @@ export const authOptions = {
       const db = client.db();
       const collection = db.collection("users");
       if (await collection.findOne({ id: user.user.id })) {
+        client.close();
         return true;
       } else {
         await collection.updateOne(
@@ -41,6 +44,7 @@ export const authOptions = {
           },
           { upsert: true }
         );
+        client.close();
         return true;
       }
     },

@@ -1,8 +1,8 @@
 import TopupLayout from "../../components/topupLayout/topupLayout";
 import { getSession } from "next-auth/react";
 
-function Topup() {
-  return <TopupLayout />;
+function Topup({ session }) {
+  return <TopupLayout session={session} />;
 }
 
 export async function getServerSideProps(context) {

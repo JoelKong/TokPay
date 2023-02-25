@@ -10,4 +10,4 @@ function PaymentLayout() {
         </div>
     )
 }
-export default PaymentLayout
+export default PaymentLayout;
