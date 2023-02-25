@@ -18,6 +18,7 @@ export const authOptions = {
       const userData = await collection.findOne({ id: session.token.sub });
       if (userData) {
         session.session.user.currentBalance = userData.currentBalance;
+        session.session.user.id = userData.id;
       }
       return session;
     },
