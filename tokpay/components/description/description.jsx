@@ -16,14 +16,18 @@ function Description({ samplePieData }) {
     return null;
   } else {
     return (
-      <section className={classes.bookkeeping}>
+      <section className={classes.section}>
         <div className={classes.chart}>
           <Pie data={samplePieData} width={100} height={100} />
         </div>
-        <article className={classes.bookkeepingarticle}>
+        <article className={classes.article}>
           <div>
-            <h2 className={classes.bookkeepingtitle}>Why TokPay?</h2>
-            <p className={classes.bookkeepingbody}></p>
+            <h2 className={classes.title}>Why TokPay?</h2>
+            <p className={classes.body}>
+              Visualise your spendings and transact money easily through TokPay.
+              Keeping track of your spendings would never again be a hassle when
+              you sign up with us.
+            </p>
           </div>
         </article>
       </section>

@@ -1,4 +1,28 @@
+.section {
+  position: absolute;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 4rem;
+}
+
 .chart {
-  width: 100px;
-  height: 100px;
+  width: 250px;
+  height: 250px;
+}
+
+.article {
+  width: 400px;
+}
+
+.title {
+  font-size: 40px;
+  border-bottom: 2px solid black;
+}
+
+.body {
+  font-size: 20px;
 }
