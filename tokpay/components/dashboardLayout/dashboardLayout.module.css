@@ -1,14 +1,30 @@
 .body {
-    background-color: #212121
+  background-color: #212121;
+  display: flex;
+  flex-direction: row;
 }
 
 .layout {
-    display: flex;
-    height: 100vh;
-    overflow: hidden;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
 }
 
 .content {
-    flex: 1;
-    padding: 20px;
+  flex: 1;
+  padding: 20px;
+}
+
+.dashboard {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 85vw;
+  font-size: 40px;
+  color: white;
+}
+
+.amount {
+  margin-top: 1.5rem;
 }
