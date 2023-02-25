@@ -1,14 +1,14 @@
 import SideBar from "../sidebar/sidebar";
 import AddMoney from "../topup/addMoney";
-import classes from "./topupLayout.module.css"
+import classes from "./topupLayout.module.css";
 
-function TopupLayout() {
-    return (
-        <main className = {classes.body}>
-            <SideBar/>
-            <AddMoney/>
-        </main>
-    )
+function TopupLayout({ session }) {
+  return (
+    <main className={classes.body}>
+      <SideBar />
+      <AddMoney session={session} />
+    </main>
+  );
 }
 
-export default TopupLayout
+export default TopupLayout;
