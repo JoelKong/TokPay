@@ -1,5 +1,11 @@
-.layout{
-    display:flex;
-    flex-direction: column;
-    color: white;
+.layout {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.message {
+  margin-top: 2rem;
+  color: green;
+  font-size: 30px;
 }
