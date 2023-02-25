@@ -1,11 +1,13 @@
 import SideBar from "../sidebar/sidebar";
+import AddMoney from "../topup/addMoney";
 import classes from "./topupLayout.module.css"
 
 function TopupLayout() {
     return (
-        <div className = {classes.body}>
+        <main className = {classes.body}>
             <SideBar/>
-        </div>
+            <AddMoney/>
+        </main>
     )
 }
 
