@@ -1,3 +1,7 @@
+.body {
+    background-color: #212121
+}
+
 .layout {
     display: flex;
     height: 100vh;

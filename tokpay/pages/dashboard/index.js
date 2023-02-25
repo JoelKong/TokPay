@@ -1,7 +1,12 @@
-import Layout from "../../components/dashboardLayout/layout";
-
+import DashboardLayout from "../../components/dashboardLayout/dashboardLayout";
 function DashBoard() {
-  return <Layout />;
+  return (
+    <main>
+      <div>
+        <DashboardLayout />
+      </div>
+    </main>
+  );
 }
 
 export default DashBoard;

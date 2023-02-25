@@ -5,10 +5,13 @@ function SideBar() {
         <div className = {classes.sidebar}>
             <ul className= {classes.ul}>
                 <li>
-                    <a>Pay</a>
+                    <a className = {classes.a} href="/dashboard">Details</a>
                 </li>
                 <li>
-                    <a>Top-up</a>
+                    <a className = {classes.a} href="/payment">Pay</a>
+                </li>
+                <li>
+                    <a className = {classes.a} href="/topup">Top-up</a>
                 </li>
             </ul>
         </div>
