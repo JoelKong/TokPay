@@ -1,9 +1,10 @@
 import classes from "./pay.module.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 function Pay({ session }) {
   const [formFields, setFormFields] = useState([{ email: "", amount: 0 }]);
+  const [message, setMessage] = useState("");
 
   const handleFormChange = (event, index) => {
     let data = [...formFields];
@@ -13,20 +14,20 @@ function Pay({ session }) {
 
   const submit = async (e) => {
     e.preventDefault();
+    setMessage("");
     let total = 0;
     for (let i = 0; i < formFields.length; i++) {
       total += parseInt(formFields[i].amount);
     }
     if (total > session.session.user.currentBalance) {
-      console.log("No money u poor :(");
+      setMessage("Current Balance Insufficient");
       return;
     }
     const sendMoney = await axios.patch("/api/transactmoney", {
       id: session.session.user.id,
       email: formFields,
-      currentBalance: session.session.user.currentBalance,
     });
-
+    setMessage(sendMoney.data.message);
     setFormFields([{ email: "", amount: 0 }]);
   };
 
@@ -75,6 +76,7 @@ function Pay({ session }) {
       <br />
       <button onClick={addFields}>Add More..</button>
       <button onClick={submit}>Submit</button>
+      {message && <p className={classes.message}>{message}</p>}
     </div>
   );
 }
