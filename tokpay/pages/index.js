@@ -7,7 +7,7 @@ const DynamicDescription = dynamic(
   }
 );
 import Introduction from "../components/introduction/intro";
-import { samplePieData } from "../utils/charts/samplechart";
+import { samplePieData } from "../utils/charts/sampleChart";
 
 function Landing() {
   return (
