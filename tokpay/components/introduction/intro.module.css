@@ -1,0 +1,19 @@
+.flexcontainer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.logo {
+    margin-bottom: 50px;
+}
+
+.slogan {
+    font-size: larger;
+}
