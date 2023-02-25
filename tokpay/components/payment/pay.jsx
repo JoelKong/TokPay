@@ -19,12 +19,15 @@ function Pay({ session }) {
     }
     if (total > session.session.user.currentBalance) {
       console.log("No money u poor :(");
+      return;
     }
     const sendMoney = await axios.patch("/api/transactmoney", {
       id: session.session.user.id,
       email: formFields,
       currentBalance: session.session.user.currentBalance,
     });
+
+    setFormFields([{ email: "", amount: 0 }]);
   };
 
   const addFields = () => {
@@ -60,6 +63,7 @@ function Pay({ session }) {
                 name="amount"
                 type="number"
                 placeholder="Amount"
+                value={form.amount}
                 onChange={(event) => handleFormChange(event, index)}
                 defaultValue={0}
               />
