@@ -1,7 +1,11 @@
 import classes from "./auth.module.css";
-import { signIn } from "next-auth/react";
+import { signIn, useSession } from "next-auth/react";
+import { useRouter } from "next/router";
 
 function Authentication() {
+  const router = useRouter();
+  const { data: session, status } = useSession();
+
   return (
     <button className={classes.container} onClick={() => signIn("google")}>
       <div className={classes.googleContainer}>
