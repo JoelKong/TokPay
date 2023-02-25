@@ -11,7 +11,7 @@ function DashboardLayout({ session }) {
         >{`Welcome, ${session.session.user.name}`}</p>
         <p
           className={classes.amount}
-        >{`Current Balance: ${session.session.user.currentBalance}`}</p>
+        >{`Current Balance: $${session.session.user.currentBalance}`}</p>
       </div>
     </main>
   );
