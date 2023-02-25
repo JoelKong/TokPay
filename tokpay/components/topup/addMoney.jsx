@@ -12,14 +12,18 @@ function AddMoney({ session }) {
   const handleClick = async () => {
     setDisabled(true);
     if (inputValue) {
+      //console.log("Before",session.session.user.currentBalance)
       const updatedAmount = session.session.user.currentBalance + inputValue;
       const updateBalance = await axios.patch("/api/updatebalance", {
         newBalance: updatedAmount,
         id: session.session.user.id,
       });
+      //console.log("After",updateBalance.data.currentBalance)
       setInputValue("");
       setDisabled(false);
       setValue(updateBalance.data.currentBalance);
+      session.session.user.currentBalance = updateBalance.data.currentBalance;
+      //console.log("After setValue",session.session.user.currentBalance);
     }
   };
   return (
