@@ -1,9 +1,6 @@
 import Image from 'next/image'
 import classes from "./intro.module.css";
 
-const myLoader = ({src,width,quality}) => {
-  return 
-}
 function Introduction() {
   return (
     <div className = {classes.flexcontainer}>
@@ -11,14 +8,10 @@ function Introduction() {
         <Image
           src ="/images/TokPayPNGTransparent.png"
           alt = "TokPay Logo"
-          width = {200}
-          height = {189}
-          placeholder = {blur}
+          width = {400}
+          height = {400}
         />
       </div>
-      <p className = {classes.slogan}>
-        Hassle-free transactions starts with us
-      </p>
     </div>
   );
 }
