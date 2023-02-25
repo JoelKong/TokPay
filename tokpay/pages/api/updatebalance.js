@@ -8,12 +8,18 @@ async function handler(req, res) {
     const collection = db.collection("users");
     const userData = await collection.findOne({ id: id });
     if (userData) {
-      await collection.updateOne(
+      const updateValue = await collection.findOneAndUpdate(
         { id: id },
-        { $set: { currentBalance: newBalance } }
+        { $set: { currentBalance: newBalance } },
+        { returnDocument: "after" }
       );
-      res.status(200).json({ message: "Top Up Successful!" });
+      client.close();
+      res.status(200).json({
+        message: "Top Up Successful!",
+        currentBalance: updateValue.value.currentBalance,
+      });
     } else {
+      client.close();
       res.status(400).json({ message: "User not found" });
     }
   }
