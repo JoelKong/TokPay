@@ -2,6 +2,7 @@ import { Chart as ChartJS, ArcElement, Tooltip, Legend } from "chart.js";
 import { Pie } from "react-chartjs-2";
 import { useEffect, useState } from "react";
 import classes from "./description.module.css";
+import Authentication from "../auth/auth";
 
 function Description({ samplePieData }) {
   const [isComponentMounted, setIsComponentMounted] = useState(false);
@@ -29,6 +30,7 @@ function Description({ samplePieData }) {
               you sign up with us.
             </p>
           </div>
+          <Authentication />
         </article>
       </section>
     );
