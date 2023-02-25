@@ -6,10 +6,10 @@ function Introduction() {
     <div className={classes.flexcontainer}>
       <div className={classes.logo}>
         <Image
-          src ="/images/TokPayPNGTransparent.png"
-          alt = "TokPay Logo"
-          width = {400}
-          height = {400}
+          src="/images/TokPayPNGTransparent.png"
+          alt="TokPay Logo"
+          width={360}
+          height={360}
         />
       </div>
     </div>

@@ -13,6 +13,7 @@
 
 .container:hover {
   cursor: pointer;
+  background-color: rgb(244, 238, 238);
 }
 
 .googleContainer {
@@ -33,6 +34,5 @@
   color: linear-gradient(to right, darkblue, rgb(55, 135, 226)) 1;
   background: linear-gradient(to right, darkblue 0%, #330867 100%);
   background-clip: text;
-  -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }

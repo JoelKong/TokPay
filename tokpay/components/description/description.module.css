@@ -6,7 +6,7 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin-top: 4rem;
+  margin-top: 4.2rem;
 }
 
 .chart {
@@ -16,6 +16,7 @@
 
 .article {
   width: 400px;
+  margin-top: 1.4rem;
 }
 
 .title {
@@ -25,5 +26,6 @@
 }
 
 .body {
+  margin-top: 1rem;
   font-size: 20px;
 }
