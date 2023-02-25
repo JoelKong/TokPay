@@ -1,10 +1,10 @@
-import Image from 'next/image'
+import Image from "next/image";
 import classes from "./intro.module.css";
 
 function Introduction() {
   return (
-    <div className = {classes.flexcontainer}>
-      <div className = {classes.logo}>
+    <div className={classes.flexcontainer}>
+      <div className={classes.logo}>
         <Image
           src ="/images/TokPayPNGTransparent.png"
           alt = "TokPay Logo"
