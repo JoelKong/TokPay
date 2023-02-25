@@ -3,7 +3,7 @@ import { Pie } from "react-chartjs-2";
 import { useEffect, useState } from "react";
 import classes from "./description.module.css";
 import Authentication from "../auth/auth";
-import { options } from "../../utils/charts/samplechart";
+import { options } from "../../utils/charts/sampleChart";
 
 function Description({ samplePieData }) {
   const [isComponentMounted, setIsComponentMounted] = useState(false);
