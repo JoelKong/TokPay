@@ -11,11 +11,16 @@ export const authOptions = {
   ],
 
   callbacks: {
-    // async session(session, user) {
-    //   console.log(session.token.email);
-    //   session.token.email = user.email;
-    //   return session;
-    // },
+    async session(session) {
+      const client = await MongoClient.connect(process.env.MONGODB_URI);
+      const db = client.db();
+      const collection = db.collection("users");
+      const userData = await collection.findOne({ id: session.token.sub });
+      if (userData) {
+        session.session.user.currentBalance = userData.currentBalance;
+      }
+      return session;
+    },
     async signIn(user, account, profile) {
       const client = await MongoClient.connect(process.env.MONGODB_URI);
       const db = client.db();
@@ -31,6 +36,7 @@ export const authOptions = {
               email: user.user.email,
               name: user.user.name,
               image: user.user.image,
+              currentBalance: 10,
             },
           },
           { upsert: true }
