@@ -1,8 +1,11 @@
+import { Fragment } from "react";
+import Introduction from "../components/introduction/intro";
+
 function Landing() {
   return (
-    <div>
-      <p>hi</p>
-    </div>
+    <Fragment>
+      <Introduction />
+    </Fragment>
   );
 }
 
