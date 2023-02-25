@@ -6,8 +6,3 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
-
-.main {
-  display: flex;
-  flex-direction: row;
-}
