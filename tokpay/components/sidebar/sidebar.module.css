@@ -12,6 +12,7 @@
   margin-left: 2vw;
   color: white;
   text-decoration: none;
+  cursor: pointer;
 }
 .a:hover {
   height: fit-content;

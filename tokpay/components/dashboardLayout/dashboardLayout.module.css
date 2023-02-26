@@ -28,3 +28,8 @@
 .amount {
   margin-top: 1.5rem;
 }
+
+.name {
+  font-weight: 800;
+  font-size: 50px;
+}
