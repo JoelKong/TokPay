@@ -26,6 +26,7 @@ function Pay({ session }) {
       setDisabled(false);
       return;
     }
+
     const sendMoney = await axios.patch("/api/transactmoney", {
       id: session.session.user.id,
       email: formFields,
